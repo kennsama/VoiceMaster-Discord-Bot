@@ -75,7 +75,7 @@ class voice(commands.Cog):
 
     @commands.command()
     async def help(self, ctx):
-        embed = discord.Embed(title="Help", description="",color=0x7289da)
+        embed = discord.Embed(title="Help", description="",color=0xb83b5e)
         embed.set_author(name=f"{ctx.guild.me.display_name}",url="https://discordbots.org/bot/472911936951156740", icon_url=f"{ctx.guild.me.avatar_url}")
         embed.add_field(name=f'**Commands**', value=f'**Lock your channel by using the following command:**\n\n`.voice lock`\n\n------------\n\n'
                         f'**Unlock your channel by using the following command:**\n\n`.voice unlock`\n\n------------\n\n'
@@ -84,7 +84,6 @@ class voice(commands.Cog):
                         f'**Give users permission to join by using the following command:**\n\n`.voice permit @person`\n\n**Example:** `.voice permit @Sam#9452`\n\n------------\n\n'
                         f'**Claim ownership of channel once the owner has left:**\n\n`.voice claim`\n\n**Example:** `.voice claim`\n\n------------\n\n'
                         f'**Remove permission and the user from your channel using the following command:**\n\n`.voice reject @person`\n\n**Example:** `.voice reject @Sam#9452`\n\n', inline='false')
-        embed.set_footer(text='Bot developed by Sam#9452')
         await ctx.channel.send(embed=embed)
 
     @commands.group()
